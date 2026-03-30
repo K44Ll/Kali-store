@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalistore - Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="login-card">
+            <h1>Kalistore</h1>
+            <p class="subtitle">Acesse sua conta</p>
+
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label>Usuário</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Senha</label>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    Entrar
+                </button>
+            </form>
+            <p>Não tem uma conta? <a href="{% url 'register' %}">Cadastre-se aqui!</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

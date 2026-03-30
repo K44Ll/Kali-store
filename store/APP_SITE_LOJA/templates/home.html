@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalistore - Home</title>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header-home">
+        <div class="div-home-header">
+
+            <div class="left">
+                {% if user.is_authenticated %}
+                    <p>Bem-vindo, {{ user.username }}!</p>
+                {% endif %}
+            </div>
+
+            <div class="right">
+                {% if user.is_authenticated %}
+                    <button class="btnhome">Sair</button>
+                {% else %}
+                    <button class="btnhome">Entrar</button>
+                    <button class="btnhome">Cadastrar</button>
+                {% endif %}
+
+                <button class="btnhome">Sobre</button>
+                <button class="btnhome">Contato</button>
+                <button class="btnhome">Ajuda</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-home">
+        <div class="div-home-main">
+
+            <div class="prods">
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 1</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 2</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 3</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 4</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 5</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="prod">
+                    <img src="{% static 'images/sem-imagem.png' %}">
+                    <h2>Produto 6</h2>
+                    <p>Descrição do produto.</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
