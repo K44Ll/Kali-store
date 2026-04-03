@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5laaugja8-lco12x^!#oj=h5kk6kd$h(w*x2(2jebh()##xnf2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://kali-store.vercel.app/']
 
 
 # Application definition
@@ -129,5 +129,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'thiagodacruzsilveira2009@gmail.com'
-# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_HOST_PASSWORD = 'ljmq jtfv xrql nztk'
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
