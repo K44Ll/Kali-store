@@ -30,4 +30,4 @@ jobs:
 
     - name: Run Tests
       run: |
-        python manage.py test
+        python store/manage.py test
