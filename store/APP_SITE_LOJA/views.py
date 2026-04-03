@@ -23,3 +23,7 @@ def login(request):
 
 def register(request):
     return render(request, 'register.html')
+
+def sair(request):
+    logout(request)
+    return redirect('home')

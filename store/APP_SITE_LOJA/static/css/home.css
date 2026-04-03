@@ -61,6 +61,11 @@ body {
         0 0 40px rgba(0, 195, 255, 0.6);
 }
 
+.btnhome:click{
+    transform: scale(0.2);
+}
+
+
 /* MAIN */
 .main-home {
     padding: 30px;

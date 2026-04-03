@@ -23,9 +23,9 @@
 
             <div class="right">
                 {% if user.is_authenticated %}
-                    <button class="btnhome">Sair</button>
+                    <button class="btnhome" onclick="logout()" >Sair</button>
                 {% else %}
-                    <button class="btnhome">Entrar</button>
+                    <button class="btnhome" onclick="login()">Entrar</button>
                     <button class="btnhome">Cadastrar</button>
                 {% endif %}
 
@@ -91,4 +91,5 @@
     </main>
 
 </body>
+<script src="{% static 'js/scripts.js' %}"></script>
 </html>
